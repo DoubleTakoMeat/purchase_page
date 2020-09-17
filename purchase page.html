@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel=stylesheet type="text/css" href="CSSreset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="jQuery/jQuery.js"></script>
+	<script src="https://kit.fontawesome.com/65e4aa0e56.js" crossorigin="anonymous"></script>
+	
+    <title></title>
+	
+	<style>
+	*{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+	}
+	
+	body{
+	width:100%;
+	}
+	
+	h2{
+	font-size:1.5rem;
+	}
+	
+	input,
+	select{
+	border:2px inset !important;
+	}
+	
+	.clear-fix:after{
+	content:'';
+	display:table;
+	clear:both;
+	}
+	
+	.card_btn{
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	border:0px;
+	border-radius:10%;
+	cursor:pointer;
+	width:45px;
+	height:30px;
+	}
+	
+	#visa_btn{
+	background-image:url("pic/visa.png");
+	}
+	#mastercard_btn{
+	background-image:url("pic/mastercard.png");
+	}
+	#american-express_btn{
+	background-image:url("pic/american-express.png");
+	}
+	#jcb_btn{
+	background-image:url("pic/jcb.png");
+	}
+	
+	</style>
+  </head>
+  
+  
+  <body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 ">
+				<form>
+					<div class="form-group">
+						<label for="creditCard_company">選擇已儲存的付款方式或輸入新的付款方式以便日後進行付款及續約。</label>
+						<select class="form-control col-4" id="creditCard_company">
+							<option>Visa</option>
+							<option>Master</option>
+							<option>JCB</option>
+							<option>American Express</option>
+						</select>
+					</div>
+					
+					<div class='row'>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="creditCard_number">信用卡卡號</label>
+								<input type="text" class="form-control " id="creditCard_number" name="creditCard_number"></input>	
+							</div>
+							<h2>帳單資訊</h2>
+							<div class="form-group row">
+								<div class="col-6">
+									<label for="creditCard_firstName">名子</label>
+									<input type="text" class="form-control" id="creditCard_firstName" name="creditCard_firstName"></input>	
+								</div>
+								
+								<div class="col-6">
+									<label for="creditCard_lastName">姓氏</label>
+									<input type="text" class="form-control" id="creditCard_firstName" name="creditCard_lastName"></input>	
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="creditCard_address1">帳單地址</label>
+								<input type="text" class="form-control " id="creditCard_address1" name="creditCard_number"></input>	
+							</div>
+							<div class="form-group">
+								<label for="creditCard_address2">帳單地址2行</label>
+								<input type="text" class="form-control " id="creditCard_address2" name="creditCard_number"></input>	
+							</div>
+							<div class="form-group">
+								<label for="creditCard_date">國家/地區</label>
+								<select class="form-control">
+									<option>台灣</option>
+									<option>台灣</option>
+									<option>台灣</option>
+									<option>台灣</option>
+								</select>	
+							</div>
+							
+						</div>
+						
+						<div class="col-6">
+							<div class="form-row ">
+								<label class="col-12" for="creditCard_date">信用卡到期日和安全碼</label>
+								<div class="col-3"> <select class="form-control "></select>	</div>
+								<div class="col-4"> <select class="form-control "></select>	</div>
+								<div class="col-3"> <select class="form-control "></select> </div>
+								<div class="col-2"><a href="#">?</a></div>
+							</div>
+
+							<div class="form-group" style="margin-top: 2.8rem;">
+								<label for="creditCard_city">城市</label>
+								<input type="text" class="form-control " id="creditCard_city" name="creditCard_number"></input>	
+							</div>
+							
+							<div class="form-group" >
+								<label for="creditCard_addNum">郵遞區號</label>
+								<input type="text" class="form-control " id="creditCard_addNum" name="creditCard_number"></input>	
+							</div>
+							
+							<div class="form-group" >
+								<label for="creditCard_addNum">電話號碼</label>
+								<input type="text" class="form-control " id="creditCard_addNum" name="creditCard_number"></input>	
+							</div>
+						</div>
+						
+						<div class="col-12">
+							<p style="font-size:0.6em;">您將可以在下訂單前複核訂單內容。</p>
+							<button class="btn btn-success" type="submit" style="float:right">繼續</button>
+						</div>
+					</div>	
+				</form>
+			</div>
+		
+			<div class="col-lg-3">
+				<h2>付款方式</h2>
+				<input type="button" class="card_btn" id="visa_btn" name="visa_btn"></input>
+				<input type="button" class="card_btn" id="mastercard_btn" name="mastercard_btn"></input>
+				<input type="button" class="card_btn" id="american-express_btn" name="american-express_btn"></input>
+				<input type="button" class="card_btn" id="jcb_btn" name="jcb_btn"></input>
+				<p style="font-size:0.6em;">當您送出付費資訊時，資料均受到通過數位認證的安全通訊端層 (SSL) 技術保護。</p>
+			</div>
+			
+		</div>	
+	</div>
+
+   <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+  
+  </body>
+</html>
